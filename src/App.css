@@ -1,0 +1,11 @@
+.sticky-wrapper {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+  
+.section-wrapper {
+  position: relative;
+  display: flex;
+}
