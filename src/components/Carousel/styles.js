@@ -1,14 +1,8 @@
 import styled, { keyframes } from 'styled-components'
 
 export const scrollArrow = keyframes`
-	0% {
-    transform: translatey(0)
-  }
   50% {
-    transform: translatey(1rem)
-  }
-  100% {
-    transform: translatey(0)
+    transform: translatey(10px)
   }
 `
 
@@ -17,16 +11,24 @@ export const Container = styled.section`
   height: 100vh;
   background: #aaa;
   flex-shrink: 0;
+
+  @media (max-width: 1024px) {
+    padding: 2rem 0;
+    height: auto;
+  }
 `
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 auto;
   width: 80%;
-  height: 100%;
+  height: 95%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `
 
 export const Img = styled.img`
@@ -34,10 +36,14 @@ export const Img = styled.img`
 `
 
 export const DownArrow = styled.p`
-  display: flex;
-  justify-content: center;
-  width: 6rem;
-  height: 6rem;
-  font-size: 4em;
+  align-self: center;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 3.5em;
   animation: ${scrollArrow} 1s infinite;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `

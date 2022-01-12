@@ -9,3 +9,22 @@
   position: relative;
   display: flex;
 }
+
+@media (min-width: 1900px) {
+  .section-wrapper {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-wrapper {
+    flex-direction: column;
+    font-size: .75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-wrapper {
+    font-size: .5rem;
+  }
+}
