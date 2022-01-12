@@ -106,7 +106,7 @@ export default class Shop extends Component {
     }
 
     handleRemove(e, i) {
-        const { myCart, cost } = this.state
+        const { myCart } = this.state
         
         const removeCar = myCart.filter((car, index) => index !== i)
         const price = myCart
@@ -131,7 +131,7 @@ export default class Shop extends Component {
         const { carList, myCart, cost } = this.state
 
         return (
-            <S.Container>
+            <S.Container id="shop_now">
                 <S.Wrapper>
                     <S.Title>Car Shop!</S.Title>
                     <S.Shop>

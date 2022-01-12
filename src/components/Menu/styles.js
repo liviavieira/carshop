@@ -12,8 +12,17 @@ export const NavBar = styled.nav`
   transition: all .6s ease-in;
   z-index: 999;
 
-  &:hover {
-    backdrop-filter: blur(10px) brightness(.8);
+  @media (min-width: 1024px) {
+    &:hover {
+      backdrop-filter: blur(10px) brightness(.8);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: row;
+    width: 100vw;
+    height: 4rem;
+    border-right: none;
   }
 `
 
@@ -23,6 +32,17 @@ export const Menu = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
+
+  @media (min-width: 1900px) {
+    margin: 4rem auto;
+    transform: scale(1.6);
+  }
+
+  @media (max-width: 1024px) {
+    margin: 0;
+    padding: 1.4rem 1rem 1rem;
+    border-right: 2px solid #fff;
+  }
 `
 
 export const Bar1 = styled.div`

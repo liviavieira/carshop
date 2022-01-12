@@ -14,6 +14,15 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   width: 88%;
   height: 100%;
+
+  @media (min-width: 1900px) {
+    font-size: 2em;
+  }
+
+  @media (max-width: 768px) {
+    width: 98%;
+    font-size: .8em;
+  }
 `
 
 export const Title = styled.h2`
@@ -42,10 +51,18 @@ export const CarList = styled.div`
   &::-webkit-scrollbar-thumb:hover {
     background: #ccc; 
   }
+
+  @media (max-width: 768px) {
+    width: 63%;
+  }
 `
 
 export const CarBox = styled.div`
   margin-bottom: 4rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 1rem;
+  }
 `
 
 export const Car = styled.div`
@@ -65,13 +82,19 @@ export const CarModel = styled.h2`
   &:before {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 1rem;
     left: 0;
     width: 5rem;
-    height: 50%;
+    height: 1rem;
     background: yellow;
     mix-blend-mode: soft-light;
     transition: all 0.8s cubic-bezier(0.68, -0.6, 0.265, 2);
+
+    @media (min-width: 1900px) {
+      top: 2rem;
+      width: 12rem;
+      height: 2.2rem;
+    }
   }
 
   &:hover { 
@@ -97,10 +120,20 @@ export const CarDetails = styled.div`
   justify-content: space-between;
   padding: 0.5rem 10px;
   background: #333;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    p:last-child {
+      padding-top: 10px;
+      text-align: center;
+      font-size: 1.2em;
+    }
+  }
 `
 
 export const OrderBox = styled.div`
-  width: 35%
+  width: 36%;
 `
   
 export const ShoppingCart = styled.div`
@@ -139,7 +172,8 @@ export const OrderCost = styled.div`
 `
 
 export const Add = styled.button`
-  width: 2rem;
+  padding-top: 2px;
+  min-width: 2rem;
   height: 2rem;
   font-size: 1.5em;
   font-weight: 600;
@@ -153,6 +187,16 @@ export const Add = styled.button`
   &:hover {
     box-shadow: 0 0 10px #111;
     background: #eee;
+  }
+
+  @media (min-width: 1900px) {
+    min-width: 4rem;
+    height: 4rem;
+  }
+
+  @media (max-width: 768px) {
+    transform: scale(.8);
+    font-size: 2em;
   }
 `
 
