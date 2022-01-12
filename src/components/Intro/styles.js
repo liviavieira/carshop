@@ -9,6 +9,11 @@ export const Container = styled.section`
   color: #fff;
   background: #000;
   flex-shrink: 0;
+
+  @media (max-width: 1024px) {
+    width: 100vw;
+    font-size: 1.4em;
+  }
 `
 
 export const Wrapper = styled.div`
@@ -21,10 +26,19 @@ export const Wrapper = styled.div`
   height: 66%;
   text-align: center;
   text-transform: uppercase;
+
+  @media (max-width: 1024px) {
+    width: 80%;
+    height: 55%;
+  }
 `
 
 export const Title = styled.h2`
   font: 300 2.8em 'Playfair Display';
+
+  @media (max-width: 768px) {
+    font-size: 2.5em;
+  }
 `
 
 export const Text = styled.p`

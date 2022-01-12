@@ -21,15 +21,17 @@ export default function App() {
     setSize(true)
   }
   const handleDecrease = () => {
-      setSize(false)
+    setSize(false)
   }
 
   return (
     <>
-      <Cursor 
-        open={open} 
-        size={size}
-      />
+      {window.innerWidth > 1024 &&
+        <Cursor 
+          open={open} 
+          size={size}
+        />
+      }
       <Menu 
         handleMenu={handleMenu} 
         handleIncrease={handleIncrease} 
